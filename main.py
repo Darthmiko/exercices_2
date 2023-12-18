@@ -67,11 +67,9 @@ class Héros(NPC):
             pass
         elif attaque == random.randint(2,19):
             if self.attaque >= cible.armure:
-                cible.subir_dommage()
+                cible.subir_dommage(random.randint(1,6))
             elif self.attaque <= cible.armure:
                 pass
 
     def subir_dommage(self, dommage):
         self.dommage = random.randint(1, 6)
-
-#ca devrait marcher
